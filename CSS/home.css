@@ -42,6 +42,7 @@ body {
 .custom-bg {
   background-color: var(--primary-color) !important;
 }
+
 .custom-text {
   color: var(--primary-color) !important;
   margin-top: -1rem;
