@@ -5,7 +5,7 @@
   --footer-bg: #343a40;     /* Define footer background */
 }
 
-/* navbar css */
+/* Navbar CSS */
 .navbar .nav-link {
   font-weight: 600;
   color: var(--white-color);
@@ -45,43 +45,110 @@
   color: var(--primary-color) !important;
 }
 
-/* Custom styling for the form */
+.custom-btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: var(--hover-color);
+  color: var(--white-color);
+}
+
+/* Custom styling for the form section */
 section.container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
+/* Styling the header text */
 h2.custom-text {
-  font-weight: 600;
+  font-weight: 1000;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p {
+  text-align: center; 
 }
 
 form {
-  max-width: 600px;
+  max-width: 450px;  /* Smaller width */
   margin: 0 auto;
+  background-color: #f9f9f9; /* Light background for the form */
+  padding: 20px;  /* Reduced padding */
+  border-radius: 8px;
+  border: 3px solid rgba(9, 45, 135, 0.1); /* Lowered opacity on the border */
 }
 
+/* Label styling */
 .form-label {
   font-weight: 600;
 }
 
+/* Input and textarea styling */
 .form-control {
   border-radius: 8px;
   padding: 0.75rem;
+  height: 2.5rem;
 }
 
+/* Textarea resizing */
 textarea.form-control {
   resize: none;
+  height: 80px;
 }
 
+/* Button Styling */
 button[type="submit"] {
   background-color: var(--primary-color);
   border: none;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 1.5rem;  /* Reduced padding */
   font-weight: 600;
   border-radius: 8px;
   transition: background-color 0.3s ease;
+  color: var(--white-color);
+  width: 100%;
+  margin-top: 10px;
 }
 
+/* Button hover effect */
 button[type="submit"]:hover {
-  background-color: #ec9830;
+  background-color: var(--hover-color);
+  color:white;
+}
+
+/* Footer styling */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--white-color);
+  padding: 40px 0;
+}
+
+footer a {
+  color: var(--white-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ec9830;
+}
+
+footer .container {
+  text-align: center;
+}
+
+footer .container p {
+  margin-bottom: 20px;
+}
+
+footer .container div {
+  font-size: 14px;
 }
