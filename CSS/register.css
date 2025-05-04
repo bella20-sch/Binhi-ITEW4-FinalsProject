@@ -1,0 +1,89 @@
+
+:root {
+  --primary-color: #092d87; /* Define primary color */
+  --hover-color: #061f61;   /* Define hover color */
+  --white-color: #fff;      /* Define white color for consistency */
+  --footer-bg: #343a40;     /* Define footer background */
+}
+
+/* navbar css */
+.navbar .nav-link {
+  font-weight: 600;
+  color: var(--white-color);
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #ec9830; /* gold highlight for hover and active link */
+}
+
+/* Dropdown menu appearance */
+.dropdown-menu {
+  background-color: #f8f9fa;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu .dropdown-item {
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #e6e6e6;
+  color: #000;
+}
+
+/* Apply custom primary color for background */
+.custom-bg {
+  background-color: var(--primary-color) !important;
+}
+
+/* Apply primary color for text */
+.custom-text {
+  color: var(--primary-color) !important;
+}
+
+/* Styling for the registration form */
+section.container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.custom-text {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+form input {
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+form .form-label {
+  font-weight: 600;
+}
+
+form button {
+  background-color: var(--primary-color) !important;
+  border: none;
+  padding: 12px;
+  font-weight: 600;
+  color: white;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: var(--hover-color) !important; /* Highlight color on hover */
+}
+
+form .text-center a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+form .text-center a:hover {
+  text-decoration: underline;
+}

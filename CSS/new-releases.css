@@ -1,0 +1,86 @@
+:root {
+  --primary-color: #092d87;
+}
+
+/* navbar css */
+.navbar .nav-link {
+  font-weight: 600;
+  color: var(--white-color);
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #ec9830; /* gold highlight for hover and active link */
+}
+
+/* Dropdown menu appearance */
+.dropdown-menu {
+  background-color: #f8f9fa;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu .dropdown-item {
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #e6e6e6;
+  color: #000;
+}
+
+/* Apply custom primary color */
+.custom-bg {
+  background-color: var(--primary-color) !important;
+}
+
+.custom-text {
+  color: var(--primary-color);
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+}
+
+.card-img-top {
+  border-radius: 10px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.card-text {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+/* Card button styling */
+.card-body .btn-primary {
+  background-color: var(--primary-color);
+  color: #fff; /* Ensure text is white for visibility */
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.card-body .btn-primary:hover,
+.card-body .btn-primary:focus {
+  background-color: #ec9830; /* Highlight color on hover and focus */
+  outline: none; /* Remove focus outline */
+}
+
+/* Spacing and layout */
+section.container {
+  padding-top: 60px;
+  padding-bottom: 80px; /* Slightly increased bottom padding */
+}
