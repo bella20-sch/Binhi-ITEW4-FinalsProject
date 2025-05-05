@@ -12,8 +12,6 @@ body {
   margin-top: 3rem;
 }
 
-/* CSS/navbar.css */
-
 /* Base navbar styling */
 .navbar {
   position: fixed;
@@ -128,8 +126,6 @@ body {
     margin-bottom: 0;
   }
 }
-
-
 
 /* Custom Color Utilities */
 .custom-bg {
