@@ -12,10 +12,11 @@
 </head>
 <body style="font-family: 'Quicksand', sans-serif; background-color: #1b1b1b; color: #fff;">
 
-  <!-- Header / Navbar -->
-  <header class="custom-bg text-white">
-    <nav class="navbar navbar-expand-lg navbar-dark container">
-      <a class="navbar-brand fw-bold" href="../home.html">Binhi</a>
+<!-- Header / Navbar -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-bg w-100">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Binhi</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -24,24 +25,36 @@
           <li class="nav-item"><a class="nav-link active" href="../home.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+
+          <!-- Explore Dropdown Menu -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" data-bs-toggle="dropdown">Explore</a>
+            <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Explore
+            </a>
             <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
               <li><a class="dropdown-item" href="../all-movies.html">All Movies</a></li>
               <li><a class="dropdown-item" href="../top-rated.html">Top Rated</a></li>
               <li><a class="dropdown-item" href="../new-releases.html">New Releases</a></li>
             </ul>
           </li>
+
+          <!-- Genre Dropdown Menu -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="genreDropdown" data-bs-toggle="dropdown">Genres</a>
+            <a class="nav-link dropdown-toggle" href="#" id="genreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Genres
+            </a>
             <ul class="dropdown-menu" aria-labelledby="genreDropdown">
               <li><a class="dropdown-item" href="../genre-action.html">Action</a></li>
               <li><a class="dropdown-item" href="../genre-comedy.html">Comedy</a></li>
               <li><a class="dropdown-item" href="../genre-drama.html">Drama</a></li>
             </ul>
           </li>
+
+          <!-- Profile Dropdown Menu -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" data-bs-toggle="dropdown">Profile</a>
+            <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Profile
+            </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
               <li><a class="dropdown-item" href="../login.html">Login</a></li>
               <li><a class="dropdown-item" href="../register.html">Sign Up</a></li>
@@ -49,8 +62,9 @@
           </li>
         </ul>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
 
   <!-- Movie Details Section -->
   <section class="movie-details py-5">
@@ -93,10 +107,11 @@
         <i class="fa-regular fa-face-frown fa-lg"></i>
       </div>
   
-      <!-- Vibe & Trailer Buttons -->
+      <!--Trailer Buttons -->
       <div class="button-container">
-        <button class="btn vibe-btn">What's your Vibe?</button>
-        <button class="btn trailer-btn"><i class="fa-solid fa-play me-1"></i>Play Trailer</button>
+        <a href="https://youtu.be/TcMBFSGVi1c?si=GLlBfzxVzQY46Q8u" target="_blank" class="btn trailer-btn">
+          <i class="fa-solid fa-play me-1"></i>Play Trailer
+        </a>     
       </div>
     </div>
   
@@ -112,39 +127,19 @@
         <div class="carousel-item active">
             <div class="row justify-content-center">
             <div class="col-6 col-md-3 text-center">
-                <h6 class="fw-bold">Jack Kirby</h6>
+                <h7 class="fw-bold">Jack Kirby</h7>
                 <small class="text-muted">Characters</small>
             </div>
             <div class="col-6 col-md-3 text-center">
-                <h6 class="fw-bold">Stan Lee</h6>
+                <h7 class="fw-bold">Stan Lee</h7>
                 <small class="text-muted">Characters</small>
             </div>
             <div class="col-6 col-md-3 text-center">
-                <h6 class="fw-bold">Don Heck</h6>
+                <h7 class="fw-bold">Don Heck</h7>
                 <small class="text-muted">Characters</small>
             </div>
             <div class="col-6 col-md-3 text-center">
-                <h6 class="fw-bold">Larry Lieber</h6>
-                <small class="text-muted">Characters</small>
-            </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="row justify-content-center">
-            <div class="col-6 col-md-3 text-center">
-                <h6 class="fw-bold">Keith Giffen</h6>
-                <small class="text-muted">Characters</small>
-            </div>
-            <div class="col-6 col-md-3 text-center">
-                <h6 class="fw-bold">Jim Starlin</h6>
-                <small class="text-muted">Characters</small>
-            </div>
-            <div class="col-6 col-md-3 text-center">
-                <h6 class="fw-bold">Joe Simon</h6>
-                <small class="text-muted">Characters</small>
-            </div>
-            <div class="col-6 col-md-3 text-center">
-                <h6 class="fw-bold">Steve Englehart</h6>
+                <h7 class="fw-bold">Larry Lieber</h7>
                 <small class="text-muted">Characters</small>
             </div>
             </div>
@@ -152,23 +147,124 @@
         <div class="carousel-item">
             <div class="row justify-content-center">
             <div class="col-6 col-md-3 text-center">
-                <h6 class="fw-bold">Bill Mantlo</h6>
+                <h7 class="fw-bold">Keith Giffen</h7>
+                <small class="text-muted">Characters</small>
+            </div>
+            <div class="col-6 col-md-3 text-center">
+                <h7 class="fw-bold">Jim Starlin</h7>
+                <small class="text-muted">Characters</small>
+            </div>
+            <div class="col-6 col-md-3 text-center">
+                <h7 class="fw-bold">Joe Simon</h7>
+                <small class="text-muted">Characters</small>
+            </div>
+            <div class="col-6 col-md-3 text-center">
+                <h7 class="fw-bold">Steve Englehart</h7>
+                <small class="text-muted">Characters</small>
+            </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row justify-content-center">
+            <div class="col-6 col-md-3 text-center">
+                <h7 class="fw-bold">Bill Mantlo</h7>
                 <small class="text-muted">Characters</small>
             </div>
             </div>
         </div>
         </div>
     
-        <!-- Carousel controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#castCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#castCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-        </button>
+    <!-- Cast Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#castCarousel" data-bs-slide="prev">
+      <span class="rounded-circle p-2">
+        <i class="fas fa-chevron-left" style="color: #092d87;" aria-hidden="true"></i>
+      </span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    
+    <button class="carousel-control-next" type="button" data-bs-target="#castCarousel" data-bs-slide="next">
+      <span class="rounded-circle p-2">
+        <i class="fas fa-chevron-right" style="color: #092d87;" aria-hidden="true"></i>
+      </span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div><br>
+
+  <!-- User Reviews Carousel -->
+  <div id="reviewCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+    <h5 class="custom-text text-center mb-3">User Reviews</h5>
+    <div class="carousel-inner">
+    <!-- Review 1 -->
+    <div class="carousel-item active">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-11 col-lg-10 col-xl-9">
+          <div class="card p-3 text-center">
+            <p class="fst-italic mb-2">“Absolutely thrilling! The action set‑pieces were unmatched and the characters felt so real.”</p>
+            <h6 class="fw-bold mb-1 d-inline-block">
+              — Alex Johnson
+              <small class="text-warning ms-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </small>
+            </h6>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Review 2 -->
+    <div class="carousel-item">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-11 col-lg-10 col-xl-9">
+          <div class="card p-3 text-center">
+            <p class="fst-italic mb-2">“A masterpiece of modern cinema—great pacing, stunning visuals, and a story that sticks with you.”</p>
+            <h6 class="fw-bold mb-1 d-inline-block">
+              — Maria Lopez
+              <small class="text-warning ms-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </small>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review 3 -->
+    <div class="carousel-item">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-11 col-lg-10 col-xl-9">
+          <div class="card p-3 text-center">
+            <p class="fst-italic mb-2">“Loved every minute—Keanu’s performance was phenomenal and the fight choreography is next level.”</p>
+            <h6 class="fw-bold mb-1 d-inline-block">
+              — Samuel Kim
+              <small class="text-warning ms-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+              </small>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+      <span class="rounded-circle p-2">
+        <i class="fas fa-chevron-left" style="color: #092d87;" aria-hidden="true"></i>
+      </span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+      <span class="rounded-circle p-2">
+        <i class="fas fa-chevron-right" style="color: #092d87;" aria-hidden="true"></i>
+      </span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
   
   </section>
 
