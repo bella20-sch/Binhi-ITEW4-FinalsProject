@@ -1,13 +1,12 @@
-
 :root {
-  --primary-color: #092d87; /* Define primary color */
-  --hover-color: #061f61;   /* Define hover color */
+  --primary-color: #092d87; /* Retaining your original blue */
+  --hover-color: #061f61;   /* Darker hover color */
   --white-color: #fff;      /* White color for consistency */
   --footer-bg: #343a40;     /* Footer background */
 }
 
 body {
-  background-color: #092d870e;
+  background-color: #092d870e;  /* Keeping the light blueish background */
   margin-top: 3rem;
 }
 
@@ -16,7 +15,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #092d87;
+  background-color: var(--primary-color); /* Keep the blue theme */
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -30,7 +29,7 @@ body {
 }
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-  color: #ec9830;
+  color: #ec9830;  /* Bright hover color to add some fun */
 }
 
 /* Dropdown menu styling */
@@ -40,12 +39,12 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 .dropdown-menu .dropdown-item {
-  color: #092d87;
+  color: var(--primary-color); /* Retain the blue theme */
   font-weight: 500;
   transition: background-color 0.2s ease;
 }
 .dropdown-menu .dropdown-item:hover {
-  background-color: #e6e6e6;
+  background-color: #f1f1f1; /* Slight hover background change */
   color: #000;
 }
 
@@ -76,7 +75,7 @@ body {
 
 /* Collapsible mobile search box styling */
 #mobileSearch {
-  background-color: #092d87;
+  background-color: var(--primary-color);
 }
 #mobileSearch .form-control {
   width: 100%;
@@ -136,43 +135,80 @@ body {
   margin-top: -1rem;
 }
 
-.card {
-  border: none;
+.movie-card {
+  border: 3px solid #ccc; /* Light border for card */
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 6px;
+  transition: transform 0.3s ease;
 }
 
-.card-img-top {
-  border-radius: 10px;
-  height: 250px;
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px 0px; /* Enhanced hover effect */
+}
+
+.movie-card .card-img-top {
+  width: calc(100% - 20px);
+  height: 230px;
   object-fit: cover;
+  object-position: top;
+  border-radius: 10px 10px 0 0;
+  display: block;
+  margin: 10px auto 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
-.card-body {
-  text-align: center;
-}
-
-.card-title {
+.movie-btn {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color); /* Default border */
+  border-bottom: 5px solid var(--primary-color); /* Thicker bottom border */
+  padding: 5px 14px;
+  font-size: 0.85rem;
   font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  width: 100%;
 }
 
-.card-text {
-  color: #333;
-  font-size: 1.1rem;
-}
-
-/* Card button styling */
-.card-body .btn-primary {
+.movie-btn:hover {
   background-color: var(--primary-color);
-  border: none;
-  transition: background-color 0.3s ease;
+  color: var(--white-color);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.card-body .btn-primary:hover {
-  background-color: #ec9830; /* Highlight color on hover */
+@media (min-width: 992px) {
+  /* Override Bootstrap .col-lg-2 */
+  .popular-five > .col-lg-2 {
+    flex: 0 0 20% !important;
+    max-width: 20% !important;
+  }
 }
 
-/* Spacing and layout */
-section.container {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
+/* ── MOBILE: one card per row ── */
+@media (max-width: 575.98px) {
+  .popular-five > [class*="col-"] {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .movie-card {
+    min-height: 400px;      
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .movie-card .card-img-top {
+    height: 350px;        
+  }
+  
+  .movie-card .card-body {
+    flex-grow: 1;
+  }
+} 
