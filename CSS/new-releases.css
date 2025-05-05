@@ -11,9 +11,10 @@ body {
   font-weight: 600;
   color: var(--white-color, #fff);
   transition: color 0.3s ease;
-  padding: 0.70rem 1rem; 
+  padding: 0.70rem 1rem; /* Increase vertical & horizontal spacing */
+}
 
-
+/* Add spacing between nav items (especially helpful on mobile) */
 .navbar .nav-item {
   margin-bottom: 0.5rem; 
 }
