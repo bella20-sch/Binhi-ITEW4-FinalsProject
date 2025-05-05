@@ -66,44 +66,250 @@
   </nav>
 </header>
 
-  <!-- Top Rated Movies Section -->
-  <section class="top-rated py-5">
-    <div class="container">
-      <h2 class="custom-text mb-4">Top Rated Movies</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card shadow-sm">
-            <img src="../IMAGES/movie2.jpg" class="card-img-top" alt="Movie Title 2">
-            <div class="card-body">
-              <h5 class="card-title">Movie Title 2</h5>
-              <p class="card-text">Rating: 9.0/10</p>
-              <a href="movie2.html" class="btn custom-btn">Details</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card shadow-sm">
-            <img src="../IMAGES/movie3.jpg" class="card-img-top" alt="Movie Title 3">
-            <div class="card-body">
-              <h5 class="card-title">Movie Title 3</h5>
-              <p class="card-text">Rating: 8.8/10</p>
-              <a href="movie3.html" class="btn custom-btn">Details</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card shadow-sm">
-            <img src="../IMAGES/movie4.jpg" class="card-img-top" alt="Movie Title 4">
-            <div class="card-body">
-              <h5 class="card-title">Movie Title 4</h5>
-              <p class="card-text">Rating: 8.7/10</p>
-              <a href="movie4.html" class="btn custom-btn">Details</a>
-            </div>
-          </div>
-        </div>
-        <!-- Add more movies as needed -->
-      </div>
+<!-- Top Rated Section -->
+<section class="container py-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="custom-text fw-bold">
+      <i class="fa-solid fa-star fa-beat text-warning"></i> | Top Rated Movies
+    </h2>
+    <div>
+      <label for="star-filter" class="form-label d-none">Filter by Star Rating:</label>
+      <select id="star-filter" class="form-select">
+        <option value="all">All Ratings</option>
+        <option value="1">
+          <i class="fa-solid fa-star"></i> 1 Star
+        </option>
+        <option value="2">
+          <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> 2 Stars
+        </option>
+        <option value="3">
+          <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> 3 Stars
+        </option>
+        <option value="4">
+          <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> 4 Stars
+        </option>
+        <option value="5">
+          <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> 5 Stars
+        </option>
+      </select>
     </div>
+  </div>
+   
+  <p class="lead">Discover the top-rated films that critics and audiences love. Acclaimed stories, unforgettable performances, 
+    and cinematic excellence await!</p> <br>
+    <div class="row g-4 popular-five">
+      <!-- Movie Card 1 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="movie-card card h-100 text-center p-2 border-0">
+          <img src="../IMAGES/johnwick.jpeg" class="card-img-top rounded" alt="Movie Image">
+          <div class="card-body">
+            <h5 class="card-title fw-bold mb-2">John Wick</h5>
+            <p class="card-text text-muted small movie-info">
+              <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
+              <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            </p>
+            <a href="movies/johnwick.html" class="btn movie-btn btn-sm mt-2">Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Movie Card 2 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="movie-card card h-100 text-center p-2 border-0">
+          <img src="../IMAGES/avengers.jpeg" class="card-img-top rounded" alt="Movie Image">
+          <div class="card-body">
+            <h5 class="card-title fw-bold mb-2">Avengrs Endgame</h5>
+            <p class="card-text text-muted small movie-info">
+              <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
+              <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            </p>
+            <a href="movies/avengers.html" class="btn movie-btn btn-sm mt-2">Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Movie Card 3 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="movie-card card h-100 text-center p-2 border-0">
+          <img src="../IMAGES/salt.jpeg" class="card-img-top rounded" alt="Movie Image">
+          <div class="card-body">
+            <h5 class="card-title fw-bold mb-2">Salt</h5>
+            <p class="card-text text-muted small movie-info">
+              <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
+              <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            </p>
+            <a href="movies/salt.html" class="btn movie-btn btn-sm mt-2">Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Movie Card 4 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="movie-card card h-100 text-center p-2 border-0">
+          <img src="../IMAGES/fastnfurious.jpeg" class="card-img-top rounded" alt="Movie Image">
+          <div class="card-body">
+            <h5 class="card-title fw-bold mb-2">Fast and Furious</h5>
+            <p class="card-text text-muted small movie-info">
+              <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
+              <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            </p>
+            <a href="movies/fastnfurious.html" class="btn movie-btn btn-sm mt-2">Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Movie Card 5 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="movie-card card h-100 text-center p-2 border-0">
+          <img src="../IMAGES/topgun.jpeg" class="card-img-top rounded" alt="Movie Image">
+          <div class="card-body">
+            <h5 class="card-title fw-bold mb-2">Top Gun: Maverick</h5>
+            <p class="card-text text-muted small movie-info">
+              <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
+              <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            </p>
+            <a href="movies/topgun.html" class="btn movie-btn btn-sm mt-2">Details</a>
+          </div>
+        </div>
+      </div>
+
+          <!-- Movie Card 1 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="movie-card card h-100 text-center p-2 border-0">
+          <img src="../IMAGES/johnwick.jpeg" class="card-img-top rounded" alt="Movie Image">
+          <div class="card-body">
+            <h5 class="card-title fw-bold mb-2">John Wick</h5>
+            <p class="card-text text-muted small movie-info">
+              <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
+              <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            </p>
+            <a href="movies/johnwick.html" class="btn movie-btn btn-sm mt-2">Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Movie Card 2 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="movie-card card h-100 text-center p-2 border-0">
+          <img src="../IMAGES/avengers.jpeg" class="card-img-top rounded" alt="Movie Image">
+          <div class="card-body">
+            <h5 class="card-title fw-bold mb-2">Avengrs Endgame</h5>
+            <p class="card-text text-muted small movie-info">
+              <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
+              <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            </p>
+            <a href="movies/avengers.html" class="btn movie-btn btn-sm mt-2">Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Movie Card 3 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="movie-card card h-100 text-center p-2 border-0">
+          <img src="../IMAGES/salt.jpeg" class="card-img-top rounded" alt="Movie Image">
+          <div class="card-body">
+            <h5 class="card-title fw-bold mb-2">Salt</h5>
+            <p class="card-text text-muted small movie-info">
+              <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
+              <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            </p>
+            <a href="movies/salt.html" class="btn movie-btn btn-sm mt-2">Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Movie Card 4 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="movie-card card h-100 text-center p-2 border-0">
+          <img src="../IMAGES/fastnfurious.jpeg" class="card-img-top rounded" alt="Movie Image">
+          <div class="card-body">
+            <h5 class="card-title fw-bold mb-2">Fast and Furious</h5>
+            <p class="card-text text-muted small movie-info">
+              <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
+              <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            </p>
+            <a href="movies/fastnfurious.html" class="btn movie-btn btn-sm mt-2">Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Movie Card 5 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="movie-card card h-100 text-center p-2 border-0">
+          <img src="../IMAGES/topgun.jpeg" class="card-img-top rounded" alt="Movie Image">
+          <div class="card-body">
+            <h5 class="card-title fw-bold mb-2">Top Gun: Maverick</h5>
+            <p class="card-text text-muted small movie-info">
+              <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
+              <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            </p>
+            <a href="movies/topgun.html" class="btn movie-btn btn-sm mt-2">Details</a>
+          </div>
+        </div>
+      </div>
+
+          <!-- Movie Card 1 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="movie-card card h-100 text-center p-2 border-0">
+          <img src="../IMAGES/johnwick.jpeg" class="card-img-top rounded" alt="Movie Image">
+          <div class="card-body">
+            <h5 class="card-title fw-bold mb-2">John Wick</h5>
+            <p class="card-text text-muted small movie-info">
+              <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
+              <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            </p>
+            <a href="movies/johnwick.html" class="btn movie-btn btn-sm mt-2">Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Movie Card 2 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="movie-card card h-100 text-center p-2 border-0">
+          <img src="../IMAGES/avengers.jpeg" class="card-img-top rounded" alt="Movie Image">
+          <div class="card-body">
+            <h5 class="card-title fw-bold mb-2">Avengrs Endgame</h5>
+            <p class="card-text text-muted small movie-info">
+              <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
+              <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            </p>
+            <a href="movies/avengers.html" class="btn movie-btn btn-sm mt-2">Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Movie Card 3 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="movie-card card h-100 text-center p-2 border-0">
+          <img src="../IMAGES/salt.jpeg" class="card-img-top rounded" alt="Movie Image">
+          <div class="card-body">
+            <h5 class="card-title fw-bold mb-2">Salt</h5>
+            <p class="card-text text-muted small movie-info">
+              <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
+              <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            </p>
+            <a href="movies/salt.html" class="btn movie-btn btn-sm mt-2">Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Movie Card 4 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="movie-card card h-100 text-center p-2 border-0">
+          <img src="../IMAGES/fastnfurious.jpeg" class="card-img-top rounded" alt="Movie Image">
+          <div class="card-body">
+            <h5 class="card-title fw-bold mb-2">Fast and Furious</h5>
+            <p class="card-text text-muted small movie-info">
+              <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
+              <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            </p>
+            <a href="movies/fastnfurious.html" class="btn movie-btn btn-sm mt-2">Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Movie Card 5 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="movie-card card h-100 text-center p-2 border-0">
+          <img src="../IMAGES/topgun.jpeg" class="card-img-top rounded" alt="Movie Image">
+          <div class="card-body">
+            <h5 class="card-title fw-bold mb-2">Top Gun: Maverick</h5>
+            <p class="card-text text-muted small movie-info">
+              <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
+              <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            </p>
+            <a href="movies/topgun.html" class="btn movie-btn btn-sm mt-2">Details</a>
+          </div>
+        </div>
+      </div>
   </section>
 
   <!-- Footer (Consistent with other pages) -->
