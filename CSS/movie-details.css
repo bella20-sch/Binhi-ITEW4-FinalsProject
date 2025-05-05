@@ -12,10 +12,11 @@ body {
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
   line-height: 1.6;
+  margin-top: 3rem;
 }
 
-body {
-  margin-top: 3rem;
+h7 {
+  font-size: 18px;
 }
 
 /* Navbar Links */
@@ -166,18 +167,18 @@ body {
   justify-content: center;
   font-weight: 700;
 }
-.vibe-btn,
-.trailer-btn, .vibe-btn {
+
+.trailer-btn {
   font-weight: 600;
   padding: 8px 16px;
 }
 
-.trailer-btn, .vibe-btn {
+.trailer-btn {
   background-color: transparent;
   border: 2px solid var(--primary-color);
   color: var(--primary-color);
 }
-.trailer-btn:hover , .vibe-btn:hover{
+.trailer-btn:hover{
   background-color: var(--primary-color);
   color: var(--white-color);
 }
@@ -207,55 +208,65 @@ body {
   text-align: center;
   height: 100%;
   padding: 1rem;
+  margin-top: -1rem;
 }
 
-/* Control arrows - reduced size and better placement */
+/* Headings and subtext */
+#castCarousel .carousel-item h6 {
+  font-size: 1.25rem;    /* slightly larger for readability */
+  margin-bottom: 0.25rem;
+}
+#castCarousel .carousel-item small {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Control arrows — size, placement, hover */
 #castCarousel .carousel-control-prev,
 #castCarousel .carousel-control-next {
-  width: 5%;
-  top: 45%;
+  width: 2%;             /* narrower hit‑area */
+  top: 50%;              /* perfectly centered vertically */
+  transform: translateY(-50%);
   z-index: 2;
+  opacity: 0.8;
 }
-
+#castCarousel .carousel-control-prev:hover,
+#castCarousel .carousel-control-next:hover {
+  opacity: 1;
+}
 #castCarousel .carousel-control-prev-icon,
 #castCarousel .carousel-control-next-icon {
-  background-size: 60% 60%;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
+  background-size: 70% 70%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem;
   border-radius: 50%;
 }
 
-.carousel-item h6 {
-  font-size: 1.2rem; /* You can adjust the size as needed */
-}
-
-.carousel-item small {
-  font-size: 1rem; /* Adjust the size of the subtext as well */
-}
-
-
-/* Mobile layout fix for cast row */
+/* Mobile layout fix — stack items, increase gap */
 @media (max-width: 768px) {
   #castCarousel .carousel-item .row {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    gap: 1rem;
   }
-
   #castCarousel .carousel-item .col-md-3,
   #castCarousel .carousel-item .col-sm-6 {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;    
+  }
+  #castCarousel .carousel-control-prev,
+  #castCarousel .carousel-control-next {
+    width: 8%;
+    bottom: 100px;      
+    top: auto;
   }
 }
 
-/* Responsive */
+/* Global responsive tweaks */
 @media (max-width: 992px) {
   .movie-img {
-    height: auto; /* Ensure height adapts */
-    min-height: 300px; /* Ensure the image doesn't shrink too much */
+    height: auto;
+    min-height: 300px;
   }
   .details-meta {
     font-size: 0.9rem;
@@ -267,25 +278,20 @@ body {
     flex-direction: column;
     text-align: center;
   }
-
   .movie-img {
-    height: auto; /* Allow image height to adjust */
-    min-height: 250px; /* Ensure visibility of the entire image */
+    height: auto;
+    min-height: 250px;
     margin: 0 auto 20px;
     display: block;
   }
-
   .movie-details h1 {
     font-size: 2rem;
   }
-
   .user-score .score-circle {
     width: 40px;
     height: 40px;
     font-size: 0.9rem;
   }
-
-  .vibe-btn,
   .trailer-btn {
     font-size: 0.9rem;
   }
@@ -296,12 +302,8 @@ body {
     justify-content: center;
     gap: 0.3rem;
   }
-
-  .movie-details p {
-    font-size: 1rem;
-  }
-
+  .movie-details p,
   .review {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
