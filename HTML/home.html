@@ -15,57 +15,58 @@
 
 <!-- Header / Navbar -->
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-bg w-100">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-bg">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Binhi</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <!-- Brand always on left -->
+      <a class="navbar-brand fw-bold" href="#"><i class="fa-solid fa-beat fa-clapperboard me-2 text-white"></i>Binhi</a>
+
+      <!-- MOBILE: search toggle + hamburger on right -->
+      <div class="d-flex d-lg-none ms-auto align-items-center mobile-search-container">
+        <a class="nav-link p-2" role="button" data-bs-toggle="collapse" data-bs-target="#mobileSearch" aria-controls="mobileSearch" aria-expanded="false"><i class="fa-solid fa-search"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      </div>
+
+      <!-- COLLAPSIBLE MOBILE SEARCH BOX -->
+      <div class="collapse" id="mobileSearch">
+        <form class="d-flex px-3 py-2" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+          <button class="btn btn-outline-light" type="submit"><i class="fa-solid fa-search"></i></button>
+        </form>
+      </div>
+
+      <!-- MAIN NAV LINKS & DESKTOP ITEMS -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav left-links">
           <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-
-          <!-- Explore Dropdown Menu -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Explore
-            </a>
+            <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Explore</a>
             <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
               <li><a class="dropdown-item" href="all-movies.html">All Movies</a></li>
               <li><a class="dropdown-item" href="top-rated.html">Top Rated</a></li>
               <li><a class="dropdown-item" href="new-releases.html">New Releases</a></li>
             </ul>
           </li>
-
-          <!-- Genre Dropdown Menu -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="genreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Genres
-            </a>
+            <a class="nav-link dropdown-toggle" href="#" id="genreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Genres</a>
             <ul class="dropdown-menu" aria-labelledby="genreDropdown">
               <li><a class="dropdown-item" href="genre-action.html">Action</a></li>
               <li><a class="dropdown-item" href="genre-comedy.html">Comedy</a></li>
               <li><a class="dropdown-item" href="genre-drama.html">Drama</a></li>
             </ul>
           </li>
-
-          <!-- Profile Dropdown Menu -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Profile
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-              <li><a class="dropdown-item" href="login.html">Login</a></li>
-              <li><a class="dropdown-item" href="register.html">Sign Up</a></li>
-            </ul>
-          </li>
+        </ul>
+        <ul class="navbar-nav right-items">
+          <li class="nav-item search-form d-none d-lg-flex"><form class="d-flex" role="search"><input class="form-control" type="search" placeholder="Search" aria-label="Search"/><button class="btn btn-outline-light" type="submit"><i class="fa-solid fa-search"></i></button></form></li>
+          <li class="nav-item dropdown profile-dropdown"><a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user fa-lg"></i></a><ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown"><li><a class="dropdown-item" href="login.html">Login</a></li><li><a class="dropdown-item" href="register.html">Sign Up</a></li></ul></li>
         </ul>
       </div>
     </div>
   </nav>
 </header>
+
+
 
 <!-- Hero Section -->
 <section class="hero text-white d-flex align-items-center justify-content-center">
