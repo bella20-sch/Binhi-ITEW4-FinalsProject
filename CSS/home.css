@@ -9,14 +9,40 @@
 
 body {
   background-color: #092d870e;
+  margin-top: 3rem;
 }
 
 /* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #092d87; /* Replace with your background if needed */
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Navbar Links */
 .navbar .nav-link {
   font-weight: 600;
-  color: var(--white-color);
+  color: var(--white-color, #fff);
   transition: color 0.3s ease;
+  padding: 0.70rem 1rem; /* Increase vertical & horizontal spacing */
 }
+
+/* Add spacing between nav items (especially helpful on mobile) */
+.navbar .nav-item {
+  margin-bottom: 0.5rem; /* Adds vertical spacing between links on collapse */
+}
+
+@media (min-width: 992px) {
+  .navbar .nav-item {
+    margin-bottom: 0; /* Remove bottom margin on large screens */
+    margin-left: 1rem; /* Add horizontal spacing on desktop */
+  }
+}
+
+/* Hover and Active States */
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
   color: #ec9830; /* Gold highlight on hover/active */
@@ -58,6 +84,7 @@ body {
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
+
 .custom-btn:hover {
   background-color: var(--hover-color);
   color: var(--white-color);
@@ -66,7 +93,8 @@ body {
 .movie-btn {
   background-color: transparent;
   color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--primary-color); /* Default border */
+  border-bottom: 5px solid var(--primary-color); /* Thicker bottom border */
   padding: 5px 14px;
   font-size: 0.85rem;
   font-weight: 600;

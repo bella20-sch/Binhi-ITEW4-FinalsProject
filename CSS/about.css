@@ -6,16 +6,34 @@
   --footer-bg: #343a40;     /* Define footer background */
 }
 
-/* navbar css */
-.navbar .nav-link {
-  font-weight: 600;
-  color: var(--white-color);
-  transition: color 0.3s ease;
+body {
+  margin-top: 3rem;
 }
 
+/* Navbar Links */
+.navbar .nav-link {
+  font-weight: 600;
+  color: var(--white-color, #fff);
+  transition: color 0.3s ease;
+  padding: 0.70rem 1rem; /* Increase vertical & horizontal spacing */
+}
+
+/* Add spacing between nav items (especially helpful on mobile) */
+.navbar .nav-item {
+  margin-bottom: 0.5rem; /* Adds vertical spacing between links on collapse */
+}
+
+@media (min-width: 992px) {
+  .navbar .nav-item {
+    margin-bottom: 0; /* Remove bottom margin on large screens */
+    margin-left: 1rem; /* Add horizontal spacing on desktop */
+  }
+}
+
+/* Hover and Active States */
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-  color: #ec9830; /* gold highlight for hover and active link */
+  color: #ec9830; /* Gold highlight on hover/active */
 }
 
 /* Dropdown menu appearance */
