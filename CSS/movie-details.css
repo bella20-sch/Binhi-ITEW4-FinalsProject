@@ -1,20 +1,44 @@
 :root {
-  --primary-color: #092d87; /* Define primary color */
-  --hover-color: #061f61;   /* Define hover color */
-  --white-color: #fff;      /* White color for consistency */
-  --footer-bg: #343a40;     /* Footer background */
+  --primary-color: #092d87; /* Primary color */
+  --hover-color: #061f61;   /* Hover color */
+  --white-color: #fff;      /* White color */
+  --dark-text: #333;        /* Dark text for light backgrounds */
+  --footer-bg: #f8f9f9;     /* Light footer background */
 }
 
 body {
-  background-color: #092d870e;
+  background-color: #f8f9f9;
+  color: var(--dark-text);
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
-/* Navbar */
+body {
+  margin-top: 3rem;
+}
+
+/* Navbar Links */
 .navbar .nav-link {
   font-weight: 600;
-  color: var(--white-color);
+  color: var(--white-color, #fff);
   transition: color 0.3s ease;
+  padding: 0.70rem 1rem; /* Increase vertical & horizontal spacing */
 }
+
+/* Add spacing between nav items (especially helpful on mobile) */
+.navbar .nav-item {
+  margin-bottom: 0.5rem; /* Adds vertical spacing between links on collapse */
+}
+
+@media (min-width: 992px) {
+  .navbar .nav-item {
+    margin-bottom: 0; /* Remove bottom margin on large screens */
+    margin-left: 1rem; /* Add horizontal spacing on desktop */
+  }
+}
+
+/* Hover and Active States */
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
   color: #ec9830; /* Gold highlight on hover/active */
@@ -22,9 +46,9 @@ body {
 
 /* Dropdown */
 .dropdown-menu {
-  background-color: #f8f9fa;
+  background-color: #fff;
   border: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 .dropdown-menu .dropdown-item {
   color: var(--primary-color);
@@ -32,17 +56,18 @@ body {
   transition: background-color 0.2s ease;
 }
 .dropdown-menu .dropdown-item:hover {
-  background-color: #e6e6e6;
+  background-color: #eaeaea;
   color: #000;
 }
 
-/* Custom Color Utilities */
+/* Utility classes */
 .custom-bg {
   background-color: var(--primary-color) !important;
 }
 .custom-text {
   color: var(--primary-color) !important;
   margin-top: -1rem;
+  font-weight: 600;
 }
 
 /* Buttons */
@@ -57,42 +82,226 @@ body {
 }
 .custom-btn:hover {
   background-color: var(--hover-color);
-  color: var(--white-color);
 }
 
 /* Movie Details Section */
 .movie-details {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  background-color: #fff;
+  color: var(--dark-text);
+  padding: 60px 0;
 }
-
-.movie-details h2 {
+.movie-details h1 {
   font-weight: 700;
+  margin-bottom: 0.5rem;
 }
-
+.movie-details h4 {
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
 .movie-details p {
   font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
 }
 
+/* Poster Container */
+.poster-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #eaeaea;
+}
+
+.movie-img {
+  width: 100%;
+  height: auto; /* Keeps image responsive */
+  min-height: 200px; /* Reduced the min-height for smaller screens */
+  object-fit: cover; /* Ensure the image covers the container */
+  object-position: top; /* Keep the top part of the image visible */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 12px;
+}
+
+/* Streaming Button */
+.streaming-btn {
+  display: block;
+  margin-top: 1rem;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-weight: 600;
+  border-radius: 5px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+.streaming-btn:hover {
+  background-color: var(--hover-color);
+  color: white;
+}
+
+/* Metadata */
+.details-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.details-meta .badge {
+  background-color: #ddd;
+  color: var(--dark-text);
+  font-weight: 500;
+}
+
+/* Actions Row */
+.user-score .score-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+.vibe-btn,
+.trailer-btn, .vibe-btn {
+  font-weight: 600;
+  padding: 8px 16px;
+}
+
+.trailer-btn, .vibe-btn {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.trailer-btn:hover , .vibe-btn:hover{
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+/* Reviews */
 .movie-details .reviews {
   margin-top: 30px;
 }
-
 .review {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 400;
   border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-
 .review em {
   font-style: italic;
 }
 
-/* Adjust card styling for mobile responsiveness */
+/* Center cast content and keep layout consistent */
+#castCarousel .carousel-item .col-md-3,
+#castCarousel .carousel-item .col-sm-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 1rem;
+}
+
+/* Control arrows - reduced size and better placement */
+#castCarousel .carousel-control-prev,
+#castCarousel .carousel-control-next {
+  width: 5%;
+  top: 45%;
+  z-index: 2;
+}
+
+#castCarousel .carousel-control-prev-icon,
+#castCarousel .carousel-control-next-icon {
+  background-size: 60% 60%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.carousel-item h6 {
+  font-size: 1.2rem; /* You can adjust the size as needed */
+}
+
+.carousel-item small {
+  font-size: 1rem; /* Adjust the size of the subtext as well */
+}
+
+
+/* Mobile layout fix for cast row */
+@media (max-width: 768px) {
+  #castCarousel .carousel-item .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  #castCarousel .carousel-item .col-md-3,
+  #castCarousel .carousel-item .col-sm-6 {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .movie-img {
+    height: auto; /* Ensure height adapts */
+    min-height: 300px; /* Ensure the image doesn't shrink too much */
+  }
+  .details-meta {
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 768px) {
   .movie-details .row {
     flex-direction: column;
     text-align: center;
+  }
+
+  .movie-img {
+    height: auto; /* Allow image height to adjust */
+    min-height: 250px; /* Ensure visibility of the entire image */
+    margin: 0 auto 20px;
+    display: block;
+  }
+
+  .movie-details h1 {
+    font-size: 2rem;
+  }
+
+  .user-score .score-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .vibe-btn,
+  .trailer-btn {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .details-meta {
+    justify-content: center;
+    gap: 0.3rem;
+  }
+
+  .movie-details p {
+    font-size: 1rem;
+  }
+
+  .review {
+    font-size: 0.9rem;
   }
 }

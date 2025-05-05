@@ -1,83 +1,111 @@
 :root {
-    --primary-color: #092d87;
-  }
-  
-  /* navbar css */
-  .navbar .nav-link {
-    font-weight: 600;
-    color: var(--white-color);
-    transition: color 0.3s ease;
-  }
-  
-  .navbar .nav-link:hover,
-  .navbar .nav-link.active {
-    color: #ec9830; /* gold highlight for hover and active link */
-  }
-  
-  /* Dropdown menu appearance */
-  .dropdown-menu {
-    background-color: #f8f9fa;
-    border: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  .dropdown-menu .dropdown-item {
-    color: var(--primary-color);
-    font-weight: 500;
-    transition: background-color 0.2s ease;
-  }
-  
-  .dropdown-menu .dropdown-item:hover {
-    background-color: #e6e6e6;
-    color: #000;
-  }
-  
-  /* Apply custom primary color */
-  .custom-bg {
-    background-color: var(--primary-color) !important;
-  }
-  
-  .custom-text {
-    color: var(--primary-color);
-  }
-
-.card {
-  border: none;
-  border-radius: 10px;
+  --primary-color: #092d87; /* Define primary color */
+  --hover-color: #061f61;   /* Define hover color */
+  --white-color: #fff;  /* White color for consistency */
+  --footer-bg: #343a40; /* Footer background */
 }
 
-.card-img-top {
-  border-radius: 10px;
-  height: 250px;
-  object-fit: cover;
+body {
+  margin-top: 3rem;
 }
-
-.card-body {
-  text-align: center;
-}
-
-.card-title {
+  
+/* Navbar Links */
+.navbar .nav-link {
   font-weight: 600;
+  color: var(--white-color, #fff);
+  transition: color 0.3s ease;
+  padding: 0.70rem 1rem; /* Increase vertical & horizontal spacing */
 }
 
-.card-text {
-  color: #333;
-  font-size: 1.1rem;
+/* Add spacing between nav items (especially helpful on mobile) */
+.navbar .nav-item {
+  margin-bottom: 0.5rem; /* Adds vertical spacing between links on collapse */
 }
 
-/* Card button styling */
-.card-body .btn-primary {
-  background-color: var(--primary-color);
+@media (min-width: 992px) {
+  .navbar .nav-item {
+    margin-bottom: 0; /* Remove bottom margin on large screens */
+    margin-left: 1rem; /* Add horizontal spacing on desktop */
+  }
+}
+
+/* Hover and Active States */
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #ec9830; /* Gold highlight on hover/active */
+}
+
+/* Dropdown menu appearance */
+.dropdown-menu {
+  background-color: #f8f9fa;
   border: none;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.card-body .btn-primary:hover {
-  background-color: #ec9830; /* Highlight color on hover */
+.dropdown-menu .dropdown-item {
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: background-color 0.2s ease;
 }
 
-/* Spacing and layout */
-section.container {
-  padding-top: 60px;
-  padding-bottom: 60px;
+.dropdown-menu .dropdown-item:hover {
+  background-color: #e6e6e6;
+  color: #000;
+}
+
+/* Apply custom primary color */
+.custom-bg {
+  background-color: var(--primary-color) !important;
+}
+
+.custom-text {
+  color: var(--primary-color);
+}
+
+.movie-card {
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 6px;
+}
+
+.movie-card .card-img-top {
+  width: calc(100% - 20px);
+  height: 230px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10px 10px 0 0;
+  display: block;
+  margin: 10px auto 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.movie-btn {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color); /* Default border */
+  border-bottom: 5px solid var(--primary-color); /* Thicker bottom border */
+  padding: 5px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.movie-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 992px) {
+  /* Override Bootstrap .col-lg-2 */
+  .popular-five > .col-lg-2 {
+    flex: 0 0 20% !important;
+    max-width: 20% !important;
+  }
 }

@@ -13,53 +13,55 @@
 <body style="font-family: 'Quicksand', sans-serif;">
 
 <!-- Header / Navbar -->
-<header class="custom-bg text-white">
-  <nav class="navbar navbar-expand-lg navbar-dark container">
-    <a class="navbar-brand fw-bold" href="#">Binhi</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-bg w-100">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Binhi</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 
-        <!-- Explore Dropdown Menu (contains All Movies) -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Explore
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
-            <li><a class="dropdown-item" href="all-movies.html">All Movies</a></li>
-            <li><a class="dropdown-item" href="top-rated.html">Top Rated</a></li>
-            <li><a class="dropdown-item" href="new-releases.html">New Releases</a></li>
-          </ul>
-        </li>
+          <!-- Explore Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Explore
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+              <li><a class="dropdown-item" href="all-movies.html">All Movies</a></li>
+              <li><a class="dropdown-item" href="top-rated.html">Top Rated</a></li>
+              <li><a class="dropdown-item" href="new-releases.html">New Releases</a></li>
+            </ul>
+          </li>
 
-        <!-- Genre Dropdown Menu (Action, Comedy, Drama) -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="genreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Genres
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="genreDropdown">
-            <li><a class="dropdown-item" href="genre-action.html">Action</a></li>
-            <li><a class="dropdown-item" href="genre-comedy.html">Comedy</a></li>
-            <li><a class="dropdown-item" href="genre-drama.html">Drama</a></li>
-          </ul>
-        </li>
+          <!-- Genre Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="genreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Genres
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="genreDropdown">
+              <li><a class="dropdown-item" href="genre-action.html">Action</a></li>
+              <li><a class="dropdown-item" href="genre-comedy.html">Comedy</a></li>
+              <li><a class="dropdown-item" href="genre-drama.html">Drama</a></li>
+            </ul>
+          </li>
 
-        <!-- Profile Dropdown Menu -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Profile
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-            <li><a class="dropdown-item" href="login.html">Login</a></li>
-            <li><a class="dropdown-item" href="register.html">Sign Up</a></li>
-          </ul>
-        </li>
-      </ul>
+          <!-- Profile Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Profile
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+              <li><a class="dropdown-item" href="login.html">Login</a></li>
+              <li><a class="dropdown-item" href="register.html">Sign Up</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 </header>
