@@ -1,3 +1,97 @@
+/* Theme variables */
+:root {
+  --primary-color: #092d87;
+  --hover-color: #061f61;
+  --white-color: #ffffff;
+  --footer-bg: #343a40;
+}
+
+/* Body spacing to account for fixed navbar */
+body {
+  margin-top: 4rem;
+}
+
+/* Section spacing */
+section.container {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+/* Center review submission heading and tagline */
+section.container h2.custom-text,
+section.container p.lead {
+  text-align: center;
+}
+
+section.container h2.custom-text {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Custom button for form submission */
+.custom-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+.custom-btn:hover {
+  background-color: var(--hover-color);
+  color: var(--white-color);
+}
+
+/* Form container styling */
+#reviewForm {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 3px solid rgba(9, 45, 135, 0.1);
+}
+
+#reviewForm .form-label {
+  font-weight: 600;
+}
+
+#reviewForm .form-control,
+#reviewForm .form-select {
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+#reviewForm textarea.form-control {
+  resize: none;
+  min-height: 80px;
+}
+
+footer {
+  background-color: var(--footer-bg);
+  color: var(--white-color);
+  padding: 1.5rem 0;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--white-color);
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ec9830;
+}
+
 /* Base navbar styling */
 .navbar {
   position: fixed;
@@ -97,98 +191,4 @@
   .navbar-nav.right-items .nav-item {
     margin-bottom: 0;
   }
-}
-
-/* Theme variables */
-:root {
-  --primary-color: #092d87;
-  --hover-color: #061f61;
-  --white-color: #ffffff;
-  --footer-bg: #343a40;
-}
-
-/* Body spacing to account for fixed navbar */
-body {
-  margin-top: 4rem;
-}
-
-/* Section spacing */
-section.container {
-  padding-top: 6rem;
-  padding-bottom: 4rem;
-}
-
-/* Center review submission heading and tagline */
-section.container h2.custom-text,
-section.container p.lead {
-  text-align: center;
-}
-
-section.container h2.custom-text {
-  font-weight: 700;
-  color: var(--primary-color);
-}
-
-/* Custom button for form submission */
-.custom-btn {
-  display: block;
-  width: 100%;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--primary-color);
-  color: var(--white-color);
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
-  text-align: center;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  margin-top: 1rem;
-}
-.custom-btn:hover {
-  background-color: var(--hover-color);
-  color: var(--white-color);
-}
-
-/* Form container styling */
-#reviewForm {
-  max-width: 500px;
-  margin: 0 auto;
-  background-color: #f9f9f9;
-  padding: 2rem;
-  border-radius: 8px;
-  border: 3px solid rgba(9, 45, 135, 0.1);
-}
-
-#reviewForm .form-label {
-  font-weight: 600;
-}
-
-#reviewForm .form-control,
-#reviewForm .form-select {
-  border-radius: 10px;
-  padding: 0.75rem;
-}
-
-#reviewForm textarea.form-control {
-  resize: none;
-  min-height: 80px;
-}
-
-footer {
-  background-color: var(--footer-bg);
-  color: var(--white-color);
-  padding: 1.5rem 0;
-}
-
-footer p {
-  font-size: 0.9rem;
-}
-
-footer a {
-  color: var(--white-color);
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: #ec9830;
 }
