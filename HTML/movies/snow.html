@@ -16,16 +16,11 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-bg">
     <div class="container">
-      <!-- Brand always on left -->
       <a class="navbar-brand fw-bold" href="#"><i class="fa-solid fa-beat fa-clapperboard me-2 text-white"></i>Binhi</a>
-
-      <!-- MOBILE: search toggle + hamburger on right -->
       <div class="d-flex d-lg-none ms-auto align-items-center mobile-search-container">
         <a class="nav-link p-2" role="button" data-bs-toggle="collapse" data-bs-target="#mobileSearch" aria-controls="mobileSearch" aria-expanded="false"><i class="fa-solid fa-search"></i></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       </div>
-
-      <!-- COLLAPSIBLE MOBILE SEARCH BOX -->
       <div class="collapse" id="mobileSearch">
         <form class="d-flex px-3 py-2" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
@@ -33,7 +28,6 @@
         </form>
       </div>
 
-      <!-- MAIN NAV LINKS & DESKTOP ITEMS -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav left-links">
           <li class="nav-item"><a class="nav-link active" href="../home.html">Home</a></li>
@@ -66,10 +60,9 @@
 </header>
 
   <!-- Movie Details Section -->
-  <section class="movie-details py-5 animate-on-scroll">
+  <section class="movie-details py-5">
     <div class="container">
       <div class="row g-4">
-        <!-- Poster Column -->
         <div class="col-lg-4">
           <div class="poster-container">
             <img src="../../IMAGES/snow.jpeg" class="movie-img w-100" alt="Snow White Poster">
@@ -77,7 +70,6 @@
           <a href="#" class="btn streaming-btn mt-3 w-100">Now Streaming</a>
         </div>
 
-        <!-- Metadata & Actions Column -->
         <div class="col-lg-8">
           <h1 class="display-4 fw-bold mb-2">
             Snow White <small class="text-dark">(2025)</small>
@@ -98,8 +90,6 @@
               <div class="score-circle">45%</div>
               <div>User Score</div>
             </div>
-        
-            <!-- Emoji Reactions -->
             <div class="d-flex gap-2">
               <i class="fa-regular fa-face-grin fa-lg"></i>
               <i class="fa-regular fa-face-surprise fa-lg"></i>
@@ -121,7 +111,6 @@
           <h4 class="mb-2">Overview</h4>
           <p>Following the benevolent King's disappearance, the Evil Queen dominated the once fair land with a cruel streak. Princess Snow White flees the castle when the Queen, in her jealousy over Snow White's inner beauty, tries to kill her. Deep into the dark woods, she stumbles upon seven magical dwarves and a young bandit named Jonathan. Together, they strive to survive the Queen's relentless pursuit and aspire to take back the kingdom in the process.</p>
         
-          <!-- Cast Credits Carousel -->
           <div id="castCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
             <div class="carousel-inner">
               <!-- Slide 1 -->
@@ -146,7 +135,6 @@
                 </div>
               </div>
             </div>
-            <!-- Cast Carousel Controls -->
             <button class="carousel-control-prev" type="button" data-bs-target="#castCarousel" data-bs-slide="prev">
               <span class="rounded-circle p-2">
                 <i class="fas fa-chevron-left" style="color: #092d87;" aria-hidden="true"></i>
@@ -162,7 +150,7 @@
             </button>
           </div><br>
 
-          <!-- User Reviews Carousel -->
+          <!-- User Reviews -->
           <div id="reviewCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
             <h5 class="custom-text text-center mb-3">User Reviews</h5>
             <div class="carousel-inner">
@@ -171,7 +159,7 @@
                 <div class="row justify-content-center">
                   <div class="col-12 col-md-11 col-lg-10 col-xl-9">
                     <div class="card p-3 text-center">
-                      <p class="fst-italic mb-2">"This version of Snow White is darker, deeper, and more adventurous than any I've seen before. The Evil Queen is genuinely terrifying, and her control over the kingdom adds real stakes. Snow White is no damsel—she's strong, clever, and determined. I loved the addition of Jonathan, the bandit with a heart, and the magical dwarves brought just the right amount of charm and mystery. The visuals were stunning, and the message about inner strength really hit home. A fairy tale with grit and heart."</p>
+                      <p class="fst-italic mb-2">"This version of Snow White is darker, deeper, and more adventurous than any I've seen before."</p>
                       <h6 class="fw-bold mb-1 d-inline-block">
                         — Isla Monroe
                         <small class="text-warning ms-2">
@@ -190,7 +178,7 @@
                 <div class="row justify-content-center">
                   <div class="col-12 col-md-11 col-lg-10 col-xl-9">
                     <div class="card p-3 text-center">
-                      <p class="fst-italic mb-2">"Snow White blew me away. It's a fantasy epic wrapped in a familiar story but told with fresh energy. The action scenes were surprisingly intense, and the chemistry between Snow White and Jonathan made their alliance feel real and earned."</p>
+                      <p class="fst-italic mb-2">"Snow White blew me away. It's a fantasy epic wrapped in a familiar story but told with fresh energy."</p>
                       <h6 class="fw-bold mb-1 d-inline-block">
                         — Caleb Merrick
                         <small class="text-warning ms-2">
@@ -205,7 +193,6 @@
               </div>
             </div>
 
-            <!-- Review Carousel Controls -->
             <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
               <span class="rounded-circle p-2">
                 <i class="fas fa-chevron-left" style="color: #092d87;" aria-hidden="true"></i>
@@ -272,6 +259,5 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../../JS/scroll-animation.js"></script>
 </body>
 </html>
