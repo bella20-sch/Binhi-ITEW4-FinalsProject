@@ -192,3 +192,22 @@ h5 {
     max-width: 20% !important;
   }
 }
+
+footer {
+  background-color: var(--footer-bg);
+  color: var(--white-color);
+  padding: 1.5rem 0;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--white-color);
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ec9830;
+}
