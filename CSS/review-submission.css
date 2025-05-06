@@ -156,7 +156,7 @@ section.container h2.custom-text {
   background-color: #f9f9f9;
   padding: 2rem;
   border-radius: 8px;
-  border: 1px solid rgba(9, 45, 135, 0.1);
+  border: 3px solid rgba(9, 45, 135, 0.1);
 }
 
 #reviewForm .form-label {
