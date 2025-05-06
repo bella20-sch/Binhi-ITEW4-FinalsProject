@@ -1,12 +1,12 @@
 :root {
-  --primary-color: #092d87; /* Retaining your original blue */
-  --hover-color: #061f61;   /* Darker hover color */
-  --white-color: #fff;      /* White color for consistency */
-  --footer-bg: #343a40;     /* Footer background */
+  --primary-color: #092d87;
+  --hover-color: #061f61;
+  --white-color: #fff;
+  --footer-bg: #343a40;
 }
 
 body {
-  background-color: #092d870e;  /* Keeping the light blueish background */
+  background-color: #092d870e;
   margin-top: 3rem;
 }
 
@@ -14,17 +14,15 @@ h5 {
   font-size: 17px;
 }
 
-/* Base navbar styling */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--primary-color); /* Keep the blue theme */
+  background-color: var(--primary-color);
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Navbar links styling (applies to all breakpoints) */
 .navbar .nav-link {
   font-weight: 600;
   color: #fff;
@@ -33,39 +31,35 @@ h5 {
 }
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-  color: #ec9830;  /* Bright hover color to add some fun */
+  color: #ec9830;
 }
 
-/* Dropdown menu styling */
 .dropdown-menu {
   background-color: #f8f9fa;
   border: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 .dropdown-menu .dropdown-item {
-  color: var(--primary-color); /* Retain the blue theme */
+  color: var(--primary-color);
   font-weight: 500;
   transition: background-color 0.2s ease;
 }
 .dropdown-menu .dropdown-item:hover {
-  background-color: #f1f1f1; /* Slight hover background change */
+  background-color: #f1f1f1;
   color: #000;
 }
 
-/* —— MOBILE FIRST DEFAULTS —— */
-/* Brand margin & link spacing */
 .navbar-brand {
-  margin-right: 1rem;        /* small gap between brand & toggler */
+  margin-right: 1rem;
 }
 .navbar-nav.left-links .nav-item {
-  margin-right: 0.5rem;      /* small gap between links */
-  margin-bottom: 0.5rem;     /* vertical spacing when collapsed */
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .navbar-nav.right-items .nav-item {
-  margin-bottom: 0.5rem;     /* vertical spacing when collapsed */
+  margin-bottom: 0.5rem;
 }
 
-/* Mobile‑only search toggle (magnifier icon) */
 .mobile-search-container {
   display: flex;
   align-items: center;
@@ -77,7 +71,6 @@ h5 {
   }
 }
 
-/* Collapsible mobile search box styling */
 #mobileSearch {
   background-color: var(--primary-color);
 }
@@ -90,21 +83,17 @@ h5 {
   color: #fff;
 }
 
-/* Mobile search-form in main collapse also full width */
 .navbar .search-form .form-control {
   width: 100%;
   margin-right: 10px;
   border-radius: 50px;
 }
 
-/* —— DESKTOP OVERRIDES —— */
 @media (min-width: 992px) {
-  /* push brand farther from links */
   .navbar-brand {
     margin-right: 3rem;
   }
 
-  /* horizontal spacing for left links, no vertical gaps */
   .navbar-nav.left-links .nav-item {
     margin-right: 1rem;
     margin-bottom: 0;
@@ -117,20 +106,17 @@ h5 {
     border-radius: 50px;
   }
 
-  /* push the right-items group to the far right */
   .navbar-nav.right-items {
     margin-left: auto;
     display: flex;
     align-items: center;
   }
 
-  /* no vertical gap on right items */
   .navbar-nav.right-items .nav-item {
     margin-bottom: 0;
   }
 }
 
-/* Custom Color Utilities */
 .custom-bg {
   background-color: var(--primary-color) !important;
 }
@@ -141,7 +127,7 @@ h5 {
 }
 
 .movie-card {
-  border: 3px solid #ccc; /* Light border for card */
+  border: 3px solid #ccc;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   overflow: hidden;
@@ -152,7 +138,7 @@ h5 {
 
 .movie-card:hover {
   transform: scale(1.05);
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px 0px; /* Enhanced hover effect */
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px 0px;
 }
 
 .movie-card .card-img-top {
@@ -169,8 +155,8 @@ h5 {
 .movie-btn {
   background-color: transparent;
   color: var(--primary-color);
-  border: 2px solid var(--primary-color); /* Default border */
-  border-bottom: 5px solid var(--primary-color); /* Thicker bottom border */
+  border: 2px solid var(--primary-color);
+  border-bottom: 5px solid var(--primary-color);
   padding: 5px 14px;
   font-size: 0.85rem;
   font-weight: 600;
@@ -187,14 +173,12 @@ h5 {
 }
 
 @media (min-width: 992px) {
-  /* Override Bootstrap .col-lg-2 */
   .popular-five > .col-lg-2 {
     flex: 0 0 20% !important;
     max-width: 20% !important;
   }
 }
 
-/* ── MOBILE: one card per row ── */
 @media (max-width: 575.98px) {
   .popular-five > [class*="col-"] {
     flex: 0 0 100% !important;
@@ -204,19 +188,19 @@ h5 {
   }
   
   .movie-card {
-    min-height: 400px;      
+    min-height: 400px;
     display: flex;
     flex-direction: column;
   }
   
   .movie-card .card-img-top {
-    height: 350px;        
+    height: 350px;
   }
   
   .movie-card .card-body {
     flex-grow: 1;
   }
-} 
+}
 
 footer {
   background-color: var(--footer-bg);
