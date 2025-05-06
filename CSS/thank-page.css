@@ -1,9 +1,9 @@
 
 :root {
-  --primary-color: #092d87; /* Define primary color */
-  --hover-color: #061f61;   /* Define hover color */
-  --white-color: #fff;      /* White color for consistency */
-  --footer-bg: #343a40;     /* Footer background */
+  --primary-color: #092d87; 
+  --hover-color: #061f61;  
+  --white-color: #fff;      
+  --footer-bg: #343a40;     
 }
 
 body {
@@ -11,7 +11,18 @@ body {
   margin-top: 3rem;
 }
 
-/* Base navbar styling */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 .navbar {
   position: fixed;
   top: 0;
@@ -21,7 +32,6 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Navbar links styling (applies to all breakpoints) */
 .navbar .nav-link {
   font-weight: 600;
   color: #fff;
@@ -33,36 +43,34 @@ body {
   color: #ec9830;
 }
 
-/* Dropdown menu styling */
 .dropdown-menu {
   background-color: #f8f9fa;
   border: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
 .dropdown-menu .dropdown-item {
   color: #092d87;
   font-weight: 500;
   transition: background-color 0.2s ease;
 }
+
 .dropdown-menu .dropdown-item:hover {
   background-color: #e6e6e6;
   color: #000;
 }
 
-/* —— MOBILE FIRST DEFAULTS —— */
-/* Brand margin & link spacing */
 .navbar-brand {
-  margin-right: 1rem;        /* small gap between brand & toggler */
+  margin-right: 1rem;        
 }
 .navbar-nav.left-links .nav-item {
-  margin-right: 0.5rem;      /* small gap between links */
-  margin-bottom: 0.5rem;     /* vertical spacing when collapsed */
+  margin-right: 0.5rem;     
+  margin-bottom: 0.5rem;     
 }
 .navbar-nav.right-items .nav-item {
-  margin-bottom: 0.5rem;     /* vertical spacing when collapsed */
+  margin-bottom: 0.5rem;     
 }
 
-/* Mobile‑only search toggle (magnifier icon) */
 .mobile-search-container {
   display: flex;
   align-items: center;
@@ -74,34 +82,32 @@ body {
   }
 }
 
-/* Collapsible mobile search box styling */
 #mobileSearch {
   background-color: #092d87;
 }
+
 #mobileSearch .form-control {
   width: 100%;
   margin-bottom: 0.5rem;
 }
+
 #mobileSearch .btn {
   border-color: #fff;
   color: #fff;
 }
 
-/* Mobile search-form in main collapse also full width */
 .navbar .search-form .form-control {
   width: 100%;
   margin-right: 10px;
   border-radius: 50px;
 }
 
-/* —— DESKTOP OVERRIDES —— */
+
 @media (min-width: 992px) {
-  /* push brand farther from links */
   .navbar-brand {
     margin-right: 3rem;
   }
 
-  /* horizontal spacing for left links, no vertical gaps */
   .navbar-nav.left-links .nav-item {
     margin-right: 1rem;
     margin-bottom: 0;
@@ -114,20 +120,17 @@ body {
     border-radius: 50px;
   }
 
-  /* push the right-items group to the far right */
   .navbar-nav.right-items {
     margin-left: auto;
     display: flex;
     align-items: center;
   }
 
-  /* no vertical gap on right items */
   .navbar-nav.right-items .nav-item {
     margin-bottom: 0;
   }
 }
 
-/* Custom Color Utilities */
 .custom-bg {
   background-color: var(--primary-color) !important;
 }

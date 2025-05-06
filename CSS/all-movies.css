@@ -14,6 +14,18 @@ h5 {
   font-size: 17px;
 }
 
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 .navbar {
   position: fixed;
   top: 0;
@@ -29,6 +41,7 @@ h5 {
   transition: color 0.3s ease;
   padding: 0.7rem 1rem;
 }
+
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
   color: #ec9830;
@@ -44,6 +57,7 @@ h5 {
   font-weight: 500;
   transition: background-color 0.2s ease;
 }
+
 .dropdown-menu .dropdown-item:hover {
   background-color: #e6e6e6;
   color: #000;
@@ -52,10 +66,12 @@ h5 {
 .navbar-brand {
   margin-right: 1rem;
 }
+
 .navbar-nav.left-links .nav-item {
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 .navbar-nav.right-items .nav-item {
   margin-bottom: 0.5rem;
 }
@@ -65,6 +81,7 @@ h5 {
   align-items: center;
   margin-left: auto;
 }
+
 @media (min-width: 992px) {
   .mobile-search-container {
     display: none !important;
@@ -74,10 +91,12 @@ h5 {
 #mobileSearch {
   background-color: #092d87;
 }
+
 #mobileSearch .form-control {
   width: 100%;
   margin-bottom: 0.5rem;
 }
+
 #mobileSearch .btn {
   border-color: #fff;
   color: #fff;

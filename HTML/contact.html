@@ -149,30 +149,5 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    function handleSubmit(event) {
-      event.preventDefault();
-      
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
-      
-      //Success message
-      const successMessage = document.getElementById('successMessage');
-      const messageContent = document.getElementById('messageContent');
-      messageContent.innerHTML = `Thank you ${name} for reaching out, we will send to ${email} our response once we received your message.`;
-      successMessage.style.display = 'block';
-      
-      document.getElementById('contactForm').style.display = 'none';
-      
-      return false;
-    }
-
-    function closeMessage() {
-      document.getElementById('successMessage').style.display = 'none';
-      document.getElementById('contactForm').style.display = 'block';
-      document.getElementById('contactForm').reset();
-    }
-  </script>
 </body>
 </html>

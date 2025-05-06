@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #092d87; /* Primary color */
-  --hover-color: #061f61;   /* Hover color */
-  --white-color: #fff;      /* White color */
-  --dark-text: #333;        /* Dark text for light backgrounds */
-  --footer-bg: #f8f9f9;     /* Light footer background */
+  --primary-color: #092d87; 
+  --hover-color: #061f61;   
+  --white-color: #fff;      
+  --dark-text: #333;        
+  --footer-bg: #f8f9f9;     
 }
 
 body {
@@ -15,6 +15,18 @@ body {
   margin-top: 3rem;
 }
 
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 h7 {
   font-size: 18px;
 }
@@ -23,7 +35,6 @@ h5 {
   font-size: 17px;
 }
 
-/* Base navbar styling */
 .navbar {
   position: fixed;
   top: 0;
@@ -33,7 +44,6 @@ h5 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Navbar links styling (applies to all breakpoints) */
 .navbar .nav-link {
   font-weight: 600;
   color: #fff;
@@ -45,36 +55,34 @@ h5 {
   color: #ec9830;
 }
 
-/* Dropdown menu styling */
 .dropdown-menu {
   background-color: #f8f9fa;
   border: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
 .dropdown-menu .dropdown-item {
   color: #092d87;
   font-weight: 500;
   transition: background-color 0.2s ease;
 }
+
 .dropdown-menu .dropdown-item:hover {
   background-color: #e6e6e6;
   color: #000;
 }
 
-/* —— MOBILE FIRST DEFAULTS —— */
-/* Brand margin & link spacing */
 .navbar-brand {
-  margin-right: 1rem;        /* small gap between brand & toggler */
+  margin-right: 1rem;        
 }
 .navbar-nav.left-links .nav-item {
-  margin-right: 0.5rem;      /* small gap between links */
-  margin-bottom: 0.5rem;     /* vertical spacing when collapsed */
+  margin-right: 0.5rem;     
+  margin-bottom: 0.5rem;     
 }
 .navbar-nav.right-items .nav-item {
-  margin-bottom: 0.5rem;     /* vertical spacing when collapsed */
+  margin-bottom: 0.5rem;     
 }
 
-/* Mobile‑only search toggle (magnifier icon) */
 .mobile-search-container {
   display: flex;
   align-items: center;
@@ -86,34 +94,32 @@ h5 {
   }
 }
 
-/* Collapsible mobile search box styling */
 #mobileSearch {
   background-color: #092d87;
 }
+
 #mobileSearch .form-control {
   width: 100%;
   margin-bottom: 0.5rem;
 }
+
 #mobileSearch .btn {
   border-color: #fff;
   color: #fff;
 }
 
-/* Mobile search-form in main collapse also full width */
 .navbar .search-form .form-control {
   width: 100%;
   margin-right: 10px;
   border-radius: 50px;
 }
 
-/* —— DESKTOP OVERRIDES —— */
+
 @media (min-width: 992px) {
-  /* push brand farther from links */
   .navbar-brand {
     margin-right: 3rem;
   }
 
-  /* horizontal spacing for left links, no vertical gaps */
   .navbar-nav.left-links .nav-item {
     margin-right: 1rem;
     margin-bottom: 0;
@@ -126,20 +132,17 @@ h5 {
     border-radius: 50px;
   }
 
-  /* push the right-items group to the far right */
   .navbar-nav.right-items {
     margin-left: auto;
     display: flex;
     align-items: center;
   }
 
-  /* no vertical gap on right items */
   .navbar-nav.right-items .nav-item {
     margin-bottom: 0;
   }
 }
 
-/* Utility classes */
 .custom-bg {
   background-color: var(--primary-color) !important;
 }
@@ -149,7 +152,6 @@ h5 {
   font-weight: 600;
 }
 
-/* Buttons */
 .custom-btn {
   background-color: var(--primary-color);
   color: var(--white-color);
@@ -194,10 +196,10 @@ h5 {
 
 .movie-img {
   width: 100%;
-  height: auto; /* Keeps image responsive */
-  min-height: 200px; /* Reduced the min-height for smaller screens */
-  object-fit: cover; /* Ensure the image covers the container */
-  object-position: top; /* Keep the top part of the image visible */
+  height: auto; 
+  min-height: 200px; 
+  object-fit: cover; 
+  object-position: top; 
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   border-radius: 12px;
 }
@@ -276,7 +278,6 @@ h5 {
   font-style: italic;
 }
 
-/* Center cast content and keep layout consistent */
 #castCarousel .carousel-item .col-md-3,
 #castCarousel .carousel-item .col-sm-6 {
   display: flex;
@@ -291,7 +292,7 @@ h5 {
 
 /* Headings and subtext */
 #castCarousel .carousel-item h6 {
-  font-size: 1.25rem;    /* slightly larger for readability */
+  font-size: 1.25rem;   
   margin-bottom: 0.25rem;
 }
 #castCarousel .carousel-item small {
@@ -302,8 +303,8 @@ h5 {
 /* Control arrows — size, placement, hover */
 #castCarousel .carousel-control-prev,
 #castCarousel .carousel-control-next {
-  width: 2%;             /* narrower hit‑area */
-  top: 50%;              /* perfectly centered vertically */
+  width: 2%;            
+  top: 50%;              
   transform: translateY(-50%);
   z-index: 2;
   opacity: 0.8;
@@ -320,7 +321,6 @@ h5 {
   border-radius: 50%;
 }
 
-/* Mobile layout fix — stack items, increase gap */
 @media (max-width: 768px) {
   #castCarousel .carousel-item .row {
     display: flex;
@@ -340,7 +340,6 @@ h5 {
   }
 }
 
-/* Global responsive tweaks */
 @media (max-width: 992px) {
   .movie-img {
     height: auto;
