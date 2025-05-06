@@ -1,9 +1,9 @@
 
 :root {
-  --primary-color: #092d87; /* Define primary color */
-  --hover-color: #061f61;   /* Define hover color */
-  --white-color: #fff;      /* White color for consistency */
-  --footer-bg: #343a40;     /* Footer background */
+  --primary-color: #092d87; 
+  --hover-color: #061f61;   
+  --white-color: #fff;      
+  --footer-bg: #343a40;    
 }
 
 body {
