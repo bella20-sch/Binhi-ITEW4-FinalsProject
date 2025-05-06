@@ -208,9 +208,9 @@ h2.custom-text {
   }
 
   .search-form .form-control {
-    width: 180px;
+    width: 100%;
     height: 38px;
-    margin-right: 1rem;
+    margin-right: 0.7rem;
     border-radius: 50px;
   }
 
@@ -240,6 +240,25 @@ h2.custom-text {
   .navbar-nav.left-links .nav-item {
     margin-right: 1rem;
   }
+}
+
+footer {
+  background-color: var(--footer-bg);
+  color: var(--white-color);
+  padding: 1.5rem 0;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--white-color);
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ec9830;
 }
 
 

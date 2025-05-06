@@ -1,172 +1,194 @@
-:root {
-  --primary-color: #092d87; /* Define primary color */
-  --hover-color: #061f61;   /* Define hover color */
-  --white-color: #fff;      /* Define white color for consistency */
-  --footer-bg: #343a40;     /* Define footer background */
+/* Base navbar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-body {
-  margin-top: 3rem;
-}
-
-/* Navbar Links */
+/* Navbar links styling (applies to all breakpoints) */
 .navbar .nav-link {
   font-weight: 600;
-  color: var(--white-color, #fff);
+  color: var(--white-color);
+  padding: 0.7rem 1rem;
   transition: color 0.3s ease;
-  padding: 0.70rem 1rem; /* Increase vertical & horizontal spacing */
 }
-
-/* Add spacing between nav items (especially helpful on mobile) */
-.navbar .nav-item {
-  margin-bottom: 0.5rem; /* Adds vertical spacing between links on collapse */
-}
-
-@media (min-width: 992px) {
-  .navbar .nav-item {
-    margin-bottom: 0; /* Remove bottom margin on large screens */
-    margin-left: 1rem; /* Add horizontal spacing on desktop */
-  }
-}
-
-/* Hover and Active States */
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-  color: #ec9830; /* Gold highlight on hover/active */
+  color: #ec9830;
 }
 
-/* Dropdown menu appearance */
+/* Dropdown menu styling */
 .dropdown-menu {
   background-color: #f8f9fa;
   border: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-
 .dropdown-menu .dropdown-item {
   color: var(--primary-color);
   font-weight: 500;
   transition: background-color 0.2s ease;
 }
-
 .dropdown-menu .dropdown-item:hover {
   background-color: #e6e6e6;
   color: #000;
 }
 
-/* Apply custom primary color for background */
-.custom-bg {
-  background-color: var(--primary-color) !important;
+/* MOBILE FIRST DEFAULTS */
+.navbar-brand {
+  margin-right: 1rem;
+}
+.navbar-nav.left-links .nav-item {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.navbar-nav.right-items .nav-item {
+  margin-bottom: 0.5rem;
+}
+.mobile-search-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+@media (min-width: 992px) {
+  .mobile-search-container {
+    display: none !important;
+  }
+}
+#mobileSearch {
+  background-color: var(--primary-color);
+}
+#mobileSearch .form-control {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+#mobileSearch .btn {
+  border-color: var(--white-color);
+  color: var(--white-color);
+}
+.navbar .search-form .form-control {
+  width: 100%;
+  margin-right: 10px;
+  border-radius: 50px;
 }
 
-/* Apply primary color for text */
-.custom-text {
-  color: var(--primary-color) !important;
+/* DESKTOP OVERRIDES */
+@media (min-width: 992px) {
+  .navbar-brand {
+    margin-right: 3rem;
+  }
+  .navbar-nav.left-links .nav-item {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+  .search-form .form-control {
+    width: 100%;
+    height: 38px;
+    margin-right: 0.7rem;
+    border-radius: 50px;
+  }
+  .navbar-nav.right-items {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+  .navbar-nav.right-items .nav-item {
+    margin-bottom: 0;
+  }
 }
 
+/* Theme variables */
+:root {
+  --primary-color: #092d87;
+  --hover-color: #061f61;
+  --white-color: #ffffff;
+  --footer-bg: #343a40;
+}
+
+/* Body spacing to account for fixed navbar */
+body {
+  margin-top: 4rem;
+}
+
+/* Section spacing */
+section.container {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+/* Center review submission heading and tagline */
+section.container h2.custom-text,
+section.container p.lead {
+  text-align: center;
+}
+
+section.container h2.custom-text {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Custom button for form submission */
 .custom-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
   background-color: var(--primary-color);
   color: var(--white-color);
-  border: none;
-  padding: 10px 20px;
   font-weight: 600;
-  border-radius: 5px;
-  width: 100%;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
   transition: background-color 0.3s ease;
+  margin-top: 1rem;
 }
-
 .custom-btn:hover {
   background-color: var(--hover-color);
   color: var(--white-color);
 }
 
-/* Custom styling for the form section */
-section.container {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-/* Styling the header text */
-h2.custom-text {
-  font-weight: 1000;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-p {
-  text-align: center; 
-}
-
-form {
-  max-width: 450px;  /* Smaller width */
+/* Form container styling */
+#reviewForm {
+  max-width: 500px;
   margin: 0 auto;
-  background-color: #f9f9f9; /* Light background for the form */
-  padding: 20px;  /* Reduced padding */
+  background-color: #f9f9f9;
+  padding: 2rem;
   border-radius: 8px;
-  border: 3px solid rgba(9, 45, 135, 0.1); /* Lowered opacity on the border */
+  border: 1px solid rgba(9, 45, 135, 0.1);
 }
 
-/* Label styling */
-.form-label {
+#reviewForm .form-label {
   font-weight: 600;
 }
 
-/* Input and textarea styling */
-.form-control {
-  border-radius: 8px;
+#reviewForm .form-control,
+#reviewForm .form-select {
+  border-radius: 10px;
   padding: 0.75rem;
-  height: 2.5rem;
 }
 
-/* Textarea resizing */
-textarea.form-control {
+#reviewForm textarea.form-control {
   resize: none;
-  height: 80px;
+  min-height: 80px;
 }
 
-/* Button Styling */
-button[type="submit"] {
-  background-color: var(--primary-color);
-  border: none;
-  padding: 0.75rem 1.5rem;  /* Reduced padding */
-  font-weight: 600;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-  color: var(--white-color);
-  width: 100%;
-  margin-top: 10px;
-}
-
-/* Button hover effect */
-button[type="submit"]:hover {
-  background-color: var(--hover-color);
-  color:white;
-}
-
-/* Footer styling */
 footer {
   background-color: var(--footer-bg);
   color: var(--white-color);
-  padding: 40px 0;
+  padding: 1.5rem 0;
+}
+
+footer p {
+  font-size: 0.9rem;
 }
 
 footer a {
   color: var(--white-color);
-  text-decoration: none;
   transition: color 0.3s ease;
 }
 
 footer a:hover {
   color: #ec9830;
-}
-
-footer .container {
-  text-align: center;
-}
-
-footer .container p {
-  margin-bottom: 20px;
-}
-
-footer .container div {
-  font-size: 14px;
 }
