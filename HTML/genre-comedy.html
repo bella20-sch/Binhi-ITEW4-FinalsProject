@@ -12,20 +12,16 @@
 </head>
 <body style="font-family: 'Quicksand', sans-serif;">
 
-<!-- Header / Navbar -->
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-bg">
     <div class="container">
-      <!-- Brand always on left -->
       <a class="navbar-brand fw-bold" href="#"><i class="fa-solid fa-beat fa-clapperboard me-2 text-white"></i>Binhi</a>
 
-      <!-- MOBILE: search toggle + hamburger on right -->
       <div class="d-flex d-lg-none ms-auto align-items-center mobile-search-container">
         <a class="nav-link p-2" role="button" data-bs-toggle="collapse" data-bs-target="#mobileSearch" aria-controls="mobileSearch" aria-expanded="false"><i class="fa-solid fa-search"></i></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       </div>
 
-      <!-- COLLAPSIBLE MOBILE SEARCH BOX -->
       <div class="collapse" id="mobileSearch">
         <form class="d-flex px-3 py-2" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
@@ -33,7 +29,6 @@
         </form>
       </div>
 
-      <!-- MAIN NAV LINKS & DESKTOP ITEMS -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav left-links">
           <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
@@ -57,15 +52,25 @@
           </li>
         </ul>
         <ul class="navbar-nav right-items">
-          <li class="nav-item search-form d-none d-lg-flex"><form class="d-flex" role="search"><input class="form-control" type="search" placeholder="Search" aria-label="Search"/><button class="btn btn-outline-light" type="submit"><i class="fa-solid fa-search"></i></button></form></li>
-          <li class="nav-item dropdown profile-dropdown"><a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user fa-lg"></i></a><ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown"><li><a class="dropdown-item" href="login.html">Login</a></li><li><a class="dropdown-item" href="register.html">Sign Up</a></li></ul></li>
+          <li class="nav-item search-form d-none d-lg-flex">
+            <form class="d-flex" role="search">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search"/>
+              <button class="btn btn-outline-light" type="submit"><i class="fa-solid fa-search"></i></button>
+            </form>
+          </li>
+          <li class="nav-item dropdown profile-dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user fa-lg"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+              <li><a class="dropdown-item" href="login.html">Login</a></li>
+              <li><a class="dropdown-item" href="register.html">Sign Up</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 </header>
 
-<!-- Comedy Genre Section -->
 <section class="container py-5">
   <h2 class="mb-4 custom-text fw-bold">
     <i class="fa-solid fa-laugh-beam fa-beat text-warning me-2"></i> | Comedy Movies
@@ -73,59 +78,55 @@
   <p class="lead">Laugh out loud with our curated list of hilarious and entertaining comedy movies!</p><br>
   <div class="row g-4 popular-five">
     
-    <!-- Movie Card 1 -->
     <div class="col-6 col-md-4 col-lg-2">
       <div class="movie-card card h-100 text-center p-2 border-0">
         <img src="../IMAGES/mask.jpeg" class="card-img-top rounded" alt="Movie Image">
         <div class="card-body">
           <h5 class="card-title fw-bold mb-2">The Mask</h5>
           <p class="card-text text-muted small movie-info">
-            <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
-            <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            <span><i class="fa-solid fa-clock"></i> 1h 41m</span>
+            <span><i class="fa-solid fa-star text-warning"></i> 4.2</span>
           </p>
           <a href="movies/comedy/mask.html" class="btn movie-btn btn-sm mt-2">Details</a>
         </div>
       </div>
     </div>
 
-    <!-- Movie Card 2 -->
     <div class="col-6 col-md-4 col-lg-2">
       <div class="movie-card card h-100 text-center p-2 border-0">
         <img src="../IMAGES/wolverine.jpeg" class="card-img-top rounded" alt="Movie Image">
         <div class="card-body">
           <h5 class="card-title fw-bold mb-2">Deadpool 3</h5>
           <p class="card-text text-muted small movie-info">
-            <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
-            <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            <span><i class="fa-solid fa-clock"></i> 2h 8m</span>
+            <span><i class="fa-solid fa-star text-warning"></i> 4.6</span>
           </p>
           <a href="movies/comedy/wolverine.html" class="btn movie-btn btn-sm mt-2">Details</a>
         </div>
       </div>
     </div>
 
-    <!-- Movie Card 3 -->
     <div class="col-6 col-md-4 col-lg-2">
       <div class="movie-card card h-100 text-center p-2 border-0">
         <img src="../IMAGES/minion.jpeg" class="card-img-top rounded" alt="Movie Image">
         <div class="card-body">
-          <h5 class="card-title fw-bold mb-2">Despicable Me 2</h5>
+          <h5 class="card-title fw-bold mb-2">Despicable Me 4</h5>
           <p class="card-text text-muted small movie-info">
-            <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
-            <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            <span><i class="fa-solid fa-clock"></i> 1h 30m</span>
+            <span><i class="fa-solid fa-star text-warning"></i> 4.1</span>
           </p>
           <a href="movies/comedy/minion.html" class="btn movie-btn btn-sm mt-2">Details</a>
         </div>
       </div>
     </div>
 
-    <!-- Movie Card 4 -->
     <div class="col-6 col-md-4 col-lg-2">
       <div class="movie-card card h-100 text-center p-2 border-0">
         <img src="../IMAGES/shrek.jpeg" class="card-img-top rounded" alt="Movie Image">
         <div class="card-body">
           <h5 class="card-title fw-bold mb-2">Shrek</h5>
           <p class="card-text text-muted small movie-info">
-            <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
+            <span><i class="fa-solid fa-clock"></i> 1h 30m</span>
             <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
           </p>
           <a href="movies/comedy/shrek.html" class="btn movie-btn btn-sm mt-2">Details</a>
@@ -133,67 +134,62 @@
       </div>
     </div>
 
-    <!-- Movie Card 5 -->
     <div class="col-6 col-md-4 col-lg-2">
       <div class="movie-card card h-100 text-center p-2 border-0">
         <img src="../IMAGES/qb.jpeg" class="card-img-top rounded" alt="Movie Image">
         <div class="card-body">
           <h5 class="card-title fw-bold mb-2">Sidelined</h5>
           <p class="card-text text-muted small movie-info">
-            <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
-            <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            <span><i class="fa-solid fa-clock"></i> 2h 0m</span>
+            <span><i class="fa-solid fa-star text-warning"></i> 4.3</span>
           </p>
           <a href="movies/comedy/qb.html" class="btn movie-btn btn-sm mt-2">Details</a>
         </div>
       </div>
     </div>
 
-    <!-- Movie Card 6 -->
     <div class="col-6 col-md-4 col-lg-2">
       <div class="movie-card card h-100 text-center p-2 border-0">
         <img src="../IMAGES/wolf.jpeg" class="card-img-top rounded" alt="Movie Image">
         <div class="card-body">
           <h5 class="card-title fw-bold mb-2">The Wall Street</h5>
           <p class="card-text text-muted small movie-info">
-            <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
-            <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            <span><i class="fa-solid fa-clock"></i> 3h 0m</span>
+            <span><i class="fa-solid fa-star text-warning"></i> 4.6</span>
           </p>
           <a href="movies/comedy/wolf.html" class="btn movie-btn btn-sm mt-2">Details</a>
         </div>
       </div>
     </div>
 
-    <!-- Movie Card 7 -->
     <div class="col-6 col-md-4 col-lg-2">
       <div class="movie-card card h-100 text-center p-2 border-0">
         <img src="../IMAGES/truman.jpeg" class="card-img-top rounded" alt="Movie Image">
         <div class="card-body">
           <h5 class="card-title fw-bold mb-2">The Truman Show</h5>
           <p class="card-text text-muted small movie-info">
-            <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
-            <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            <span><i class="fa-solid fa-clock"></i> 1h 43m</span>
+            <span><i class="fa-solid fa-star text-warning"></i> 4.4</span>
           </p>
           <a href="movies/comedy/truman.html" class="btn movie-btn btn-sm mt-2">Details</a>
         </div>
       </div>
     </div>
 
-    <!-- Movie Card 8 -->
     <div class="col-6 col-md-4 col-lg-2">
       <div class="movie-card card h-100 text-center p-2 border-0">
         <img src="../IMAGES/forest.jpeg" class="card-img-top rounded" alt="Movie Image">
         <div class="card-body">
           <h5 class="card-title fw-bold mb-2">Forrest Gump</h5>
           <p class="card-text text-muted small movie-info">
-            <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
-            <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            <span><i class="fa-solid fa-clock"></i> 2h 22m</span>
+            <span><i class="fa-solid fa-star text-warning"></i> 4.3</span>
           </p>
           <a href="movies/comedy/forrest.html" class="btn movie-btn btn-sm mt-2">Details</a>
         </div>
       </div>
     </div>
 
-    <!-- Movie Card 9 -->
     <div class="col-6 col-md-4 col-lg-2">
       <div class="movie-card card h-100 text-center p-2 border-0">
         <img src="../IMAGES/barbie.jpeg" class="card-img-top rounded" alt="Movie Image">
@@ -208,28 +204,25 @@
       </div>
     </div>
 
-    <!-- Movie Card 10 -->
     <div class="col-6 col-md-4 col-lg-2">
       <div class="movie-card card h-100 text-center p-2 border-0">
         <img src="../IMAGES/deadpool.jpeg" class="card-img-top rounded" alt="Movie Image">
         <div class="card-body">
           <h5 class="card-title fw-bold mb-2">Deadpool</h5>
           <p class="card-text text-muted small movie-info">
-            <span><i class="fa-solid fa-clock"></i> 1h 54m</span>
-            <span><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+            <span><i class="fa-solid fa-clock"></i> 1h 48m</span>
+            <span><i class="fa-solid fa-star text-warning"></i> 4.6</span>
           </p>
           <a href="movies/comedy/deadpool.html" class="btn movie-btn btn-sm mt-2">Details</a>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
 <footer class="bg-dark text-white mt-auto">
   <div class="container py-5">
     <div class="row">
-      <!-- About -->
       <div class="col-12 col-md-4 mb-4 text-center text-md-start">
         <h5 class="fw-bold mb-3">About Binhi</h5>
         <p class="mb-0">
@@ -237,7 +230,6 @@
         </p>
       </div>
 
-      <!-- Contact -->
       <div class="col-12 col-md-4 mb-4 text-center text-md-start">
         <h5 class="fw-bold mb-3">Contact Us</h5>
         <p class="mb-2">
@@ -254,7 +246,6 @@
         </p>
       </div>
 
-      <!-- Social -->
       <div class="col-12 col-md-4 mb-4 text-center text-md-start">
         <h5 class="fw-bold mb-3">Follow Us</h5>
         <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
