@@ -68,34 +68,31 @@
 
 <!-- Login Section -->
 <section class="container py-5">
-  <h2 class="mb-4 custom-text">Login to Binhi</h2>
-  <form action="login-action.php" method="POST" class="row g-4">
-    <div class="col-md-6">
-      <label for="email" class="form-label">Email Address</label>
-      <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
-    </div>
-    <div class="col-md-6">
-      <label for="password" class="form-label">Password</label>
-      <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
-    </div>
-    <div class="col-md-12">
-      <button type="submit" class="btn btn-primary w-100">Login</button>
-    </div>
-    <div class="col-md-12 text-center mt-3">
-      <p>Don't have an account? <a href="register.html">Sign up here</a></p>
-    </div>
-  </form>
+  <div class="form-container">
+    <h2 class="mb-4 custom-text">Login to Binhi</h2>
+    <form action="login-action.php" method="POST" class="row">
+      <div class="col-md-12 mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="col-md-12 mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <div class="col-md-12">
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+      </div>
+      <div class="col-md-12 text-center mt-3">
+        <p>Don't have an account? <a href="register.html">Sign up here</a></p>
+      </div>
+    </form>
+  </div>
 </section>
 
 <!-- Footer -->
 <footer class="bg-dark text-white py-4 mt-5">
   <div class="container text-center">
     <p>&copy; 2025 Binhi. All rights reserved.</p>
-    <div>
-      <a href="#" class="text-white me-2">Facebook</a> |
-      <a href="#" class="text-white mx-2">Instagram</a> |
-      <a href="#" class="text-white ms-2">Twitter</a>
-    </div>
   </div>
 </footer>
 
