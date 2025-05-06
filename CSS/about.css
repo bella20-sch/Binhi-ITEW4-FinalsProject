@@ -151,6 +151,7 @@ footer a:hover {
   .search-form .form-control {
     width: 180px;
     margin-right: 1rem;
+    border-radius: 50px;
   }
 
   .navbar-nav.right-items {
@@ -167,6 +168,7 @@ footer a:hover {
 #mobileSearch .form-control {
   width: 100%;
   margin-bottom: 0.5rem;
+  border-radius: 50px;
 }
 
 #mobileSearch .btn {
