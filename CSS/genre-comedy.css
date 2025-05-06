@@ -10,6 +10,10 @@ body {
   margin-top: 3rem;
 }
 
+h5 {
+  font-size: 17px;
+}
+
 /* Base navbar styling */
 .navbar {
   position: fixed;

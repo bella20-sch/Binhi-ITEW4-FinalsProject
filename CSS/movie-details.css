@@ -19,6 +19,10 @@ h7 {
   font-size: 18px;
 }
 
+h5 {
+  font-size: 17px;
+}
+
 /* Base navbar styling */
 .navbar {
   position: fixed;
