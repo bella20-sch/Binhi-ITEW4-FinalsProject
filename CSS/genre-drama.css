@@ -22,7 +22,6 @@ body {
   transform: translateY(0);
 }
 
-
 h5 {
   font-size: 17px;
 }
@@ -42,7 +41,6 @@ h5 {
   transition: color 0.3s ease;
   padding: 0.7rem 1rem;
 }
-
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
   color: #ec9830;
@@ -70,8 +68,8 @@ h5 {
 }
 
 .navbar-nav.left-links .nav-item {
-  margin-right: 0.5rem;      
-  margin-bottom: 0.5rem;    
+  margin-right: 0.5rem;     
+  margin-bottom: 0.5rem;     
 }
 
 .navbar-nav.right-items .nav-item {
@@ -148,43 +146,56 @@ h5 {
   margin-top: -1rem;
 }
 
-.card {
-  border: none;
+.movie-card {
+  border: 3px solid #ccc;
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 6px;
+  transition: transform 0.3s ease;
 }
 
-.card-img-top {
-  border-radius: 10px;
-  height: 250px;
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card .card-img-top {
+  width: calc(100% - 20px);
+  height: 230px;
   object-fit: cover;
+  object-position: top;
+  border-radius: 10px 10px 0 0;
+  display: block;
+  margin: 10px auto 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
-.card-body {
-  text-align: center;
-}
-
-.card-title {
+.movie-btn {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color); 
+  border-bottom: 5px solid var(--primary-color); 
+  padding: 5px 14px;
+  font-size: 0.85rem;
   font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  width: 100%;
 }
 
-.card-text {
-  color: #333;
-  font-size: 1.1rem;
-}
-
-.card-body .btn-primary {
+.movie-btn:hover {
   background-color: var(--primary-color);
-  border: none;
-  transition: background-color 0.3s ease;
+  color: var(--white-color);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.card-body .btn-primary:hover {
-  background-color: #ec9830;
-}
-
-section.container {
-  padding-top: 60px;
-  padding-bottom: 60px;
+@media (min-width: 992px) {
+  .popular-five > .col-lg-2 {
+    flex: 0 0 20% !important;
+    max-width: 20% !important;
+  }
 }
 
 footer {
@@ -205,3 +216,4 @@ footer a {
 footer a:hover {
   color: #ec9830;
 }
+
