@@ -22,7 +22,7 @@ body {
 }
 
 h5 {
-  font-size: 15.5px;
+  font-size: 17px;
 }
 
 .navbar {
@@ -230,4 +230,26 @@ footer a {
 
 footer a:hover {
   color: #ec9830;
+}
+
+/* Mobile: 1 card per row at <=460px, keep card size */
+@media (max-width: 472px) {
+  .popular-five > [class*="col-"] {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+  .movie-card {
+    width: 95%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+  .movie-card .card-img-top {
+    object-fit: contain;
+    width: 95%;
+    height: auto;
+    background: #fff;
+    display: block;
+  }
 }

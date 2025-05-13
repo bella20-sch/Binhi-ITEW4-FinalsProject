@@ -256,3 +256,28 @@ footer a {
 footer a:hover {
   color: #ec9830;
 }
+
+/* Mobile: 1 card per row at <=432px, keep card size */
+@media (max-width: 432px) {
+  .popular-five > [class*="col-"] {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+  .movie-card {
+    min-width: 300px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .movie-card .card-img-top {
+    object-fit: contain;
+    width: 95%;
+    height: auto;
+    background: #fff;
+    display: block;
+  }
+}
+
+
+
