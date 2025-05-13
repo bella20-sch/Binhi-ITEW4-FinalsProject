@@ -215,16 +215,16 @@ footer a:hover {
 }
 
 /* Mobile: 1 card per row at <=432px, keep card size */
-@media (max-width: 432px) {
-  .all-movies > [class*="col-"] {
+@media (max-width: 460px) {
+  .popular-five > [class*="col-"] {
     flex: 0 0 100% !important;
     max-width: 100% !important;
     display: flex;
     justify-content: center;
   }
   .movie-card {
-    min-width: 300px;
-    max-width: 300px;
+    width: 95%;
+    max-width: 340px;
     margin: 0 auto;
   }
   .movie-card .card-img-top {
@@ -234,4 +234,4 @@ footer a:hover {
     background: #fff;
     display: block;
   }
-}
+} 
